@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-fragment xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="
+        http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd" version="3.0">
+    <name>SecurityFragment</name>
+
+    
+    <servlet>
+        <servlet-name>TestServlet2</servlet-name>
+        <servlet-class>com.heimschild.test.security.TestServlet2</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>TestServlet2</servlet-name>
+        <url-pattern>/test2</url-pattern>
+    </servlet-mapping>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>test2</web-resource-name>
+            <url-pattern>/test2</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>ADMIN</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-role>
+        <role-name>ADMIN</role-name>
+    </security-role>
+
+    <login-config>
+        <auth-method>BASIC</auth-method>
+    </login-config>
+</web-fragment>
