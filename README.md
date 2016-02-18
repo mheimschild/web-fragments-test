@@ -1,5 +1,7 @@
 ### Web fragments sample project
 
+This projects shows how to reduce complexity of huge web.xml files moving parts of the configuration to submodules using server 3.0 feature called web fragments
+
 This sample project consists of two modules - web and lib
 
 "web" project has a servlet mapped to /test1
