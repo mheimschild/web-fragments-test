@@ -12,3 +12,5 @@ On the other hand curl http://localhost:8080/test2 returns status code 401
 
 * web/src/main/webapp/WEB-INF/web.xml - main web descriptor
 * lib/src/main/resources/META-INF/web-fragment.xml - web fragment containing security configuration
+
+*Does not work on tomcat 8 when deployed in expanded state?*
